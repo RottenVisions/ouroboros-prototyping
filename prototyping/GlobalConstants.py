@@ -1,7 +1,6 @@
 EMPTY_SLOT = -1  # Empty inventory  value
 INVENTORY_OPERATION_ERROR = -1	 # Invalid inventory operation value
 
-
 #Guild Rankings
 
 LEADER = 0
@@ -19,3 +18,6 @@ PARTY_CAPACITY = 5
 MICRO_RAID_CAPACITY = 10
 MINI_RAID_CAPACITY = 15
 RAID_CAPACITY = 40
+
+#Chat
+CHAT_CHANNEL_GLOBAL_CAPACITY = 5
