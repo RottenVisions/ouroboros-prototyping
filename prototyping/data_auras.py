@@ -8,6 +8,9 @@ data = {
 		'school': 'Shadow',
 		'icon': 'Aura_30',
 		'type': 'Harmful',
+		'script': 'HarmfulAura',
+		'stackable': 'True',
+		'maxStacks': 5,
 		'amount': 1,
 		'duration': 12,
 		'period': 2,
@@ -20,6 +23,9 @@ data = {
 		'school': 'Shadow',
 		'icon': 'Aura_31',
 		'type': 'Harmful',
+		'script': 'HarmfulAura',
+		'stackable': 'False',
+		'maxStacks': 0,
 		'amount': 2,
 		'duration': 33,
 		'period': 11,
@@ -32,6 +38,9 @@ data = {
 		'school': 'Dark',
 		'icon': 'Aura_20',
 		'type': 'Harmful',
+		'script': 'HarmfulAura',
+		'stackable': 'False',
+		'maxStacks': 0,
 		'amount': 2,
 		'duration': 60,
 		'period': 6,
@@ -44,6 +53,9 @@ data = {
 		'school': 'Holy',
 		'icon': 'Aura_28',
 		'type': 'Helpful',
+		'script': 'HelpfulAura',
+		'stackable': 'False',
+		'maxStacks': 0,
 		'amount': 10,
 		'duration': 30,
 		'period': 5,
@@ -54,4 +66,3 @@ data = {
 allData = {
 	'AuraInitialization': data
 }
-

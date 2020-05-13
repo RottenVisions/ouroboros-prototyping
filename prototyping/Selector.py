@@ -53,27 +53,7 @@ class Selector:
 				bestAbility = healingAbilities[i]
 		return bestAbility
 
-	def getAbilityWithUnknown(self, id):
-		for i, itemIndex in enumerate(data_abilities.data):
-			if data_abilities.data[itemIndex]['id'] == id:
-				return data_abilities.data[(i + 1) % len(data_abilities.data)]
+	def auraTick(self, aura):
 
-	def getAbilityWithId(self, id):
-		for i, itemIndex in enumerate(data_abilities.data):
-			if data_abilities.data[itemIndex]['id'] == id:
-				return data_abilities.data[itemIndex]
 
-	def getAbilityWithName(self, name):
-		for i, itemIndex in enumerate(data_abilities.data):
-			if data_abilities.data[itemIndex]['name'] == name:
-				return data_abilities.data[itemIndex]
-
-	def getAuraWithId(self, id):
-		for i, itemIndex in enumerate(data_auras.data):
-			if data_auras.data[itemIndex]['id'] == id:
-				return data_auras.data[itemIndex]
-
-	def getAuraWithName(self, name):
-		for i, itemIndex in enumerate(data_auras.data):
-			if data_auras.data[itemIndex]['name'] == name:
-				return data_auras.data[itemIndex]
+		print(aura['period'])

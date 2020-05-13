@@ -7,6 +7,9 @@ from Guild import GuildManager
 from Chat import ChatManager
 from Selector import Selector
 from DataPuller import DataPuller
+from DataProcessor import DataProcessor
+
+import InitFix
 
 import GlobalConstants
 import GlobalEnums
@@ -66,6 +69,7 @@ def ChatTest1():
 
 def Selector1():
 	selector = Selector()
+	dataProcessor = DataProcessor()
 	#abil = selector.getAbilityWithId(3)
 	passed = selector.runSelector()
 	print(passed)
@@ -77,13 +81,33 @@ def Selector1():
 	#abil = selector.getFirstHealingAbility()
 	#print (abil['name'])
 
+def Selector2():
+	selector = Selector()
+	dataProcessor = DataProcessor()
+	selector.auraTick(dataProcessor.getAuraWithId(2))
+
 def DataPuller1():
 	dataPull = DataPuller()
 	dataPull.createSpawnPointDatas()
-	
+
+def SelectByID():
+	dataProcessor = DataProcessor()
+	aura = dataProcessor.getAuraWithIdLine(2)
+	print(aura)
+
+def SelectByID2():
+	InitFix.onInit()
+	InitFix.getAuraByID(3)
+
+def Testing123():
+	#print(60 % 10.0)
+	#print(60 % 10.0 is 0)
 
 #GuildTest1()
 #DataPullTest1()
 #ChatTest1()
 #Selector1()
-DataPuller1()
+#DataPuller1()
+#Selector2()
+#SelectByID2()
+Testing123()
