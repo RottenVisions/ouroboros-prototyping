@@ -11,6 +11,7 @@ from DataPuller import DataPuller
 from DataProcessor import DataProcessor
 from GameMaster import GameMaster
 from Loot import Loot
+from WeightedRandomPicker import WeightedRandomPicker
 
 import InitFix
 import items
@@ -110,8 +111,7 @@ def ChatTest1():
 	chat = ChatManager()
 	for _ in range(20):
 		chat.appendMessage(GlobalEnums.ChatChannel.CHAT_CHANNEL_GLOBAL, 'Alfred', 'We need to overcome')
-		print(_)
-	#chat.writeChannelTypeToFile(GlobalEnums.ChatChannel.CHAT_CHANNEL_GLOBAL)
+	chat.writeChannelTypeToFile(GlobalEnums.ChatChannel.CHAT_CHANNEL_GLOBAL)
 	print(chat.chatChannelGlobal)
 
 def Selector1():
@@ -163,6 +163,19 @@ def LootTest1():
 		print('got death charger!')
 	else:
 		print('nothing')
+
+def WeightedPick():
+	picker = WeightedRandomPicker()
+	picker.addEntry('10 Gold', 5.0)
+	picker.addEntry('Sword', 20.0)
+	picker.addEntry('Shield', 45.0)
+	picker.addEntry('Armor', 20.0)
+	picker.addEntry('Potion', 10.0)
+
+	for i in range(20):
+		new = picker.getRandom()
+		print(i, new.id, new.weight)
+
 #GuildTest1()
 #DataPullTest1()
 #ChatTest1()
@@ -179,7 +192,8 @@ def LootTest1():
 #InventoryTest2()
 #InventoryTest3()
 #InventoryTest4()
-#InventoryTest5()
-InventoryTest6()
+#InventoryTest6()
 
 #LootTest1()
+
+WeightedPick()

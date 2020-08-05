@@ -8,6 +8,7 @@ class Selector:
 	def __init__(self):
 		self.HP = 100
 		self.EG = 100
+		self.abilities = []
 
 		self.lowHPThreshold = .15
 		self.lowEGThreshold = .25
@@ -54,6 +55,4 @@ class Selector:
 		return bestAbility
 
 	def auraTick(self, aura):
-
-
-		print(aura['period'])
+		pass

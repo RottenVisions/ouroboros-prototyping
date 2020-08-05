@@ -60,6 +60,7 @@ class ChatManager:
 		self.writeChannelToFile(dictToWrite, channelType)
 
 	def writeChannelToFile(self, dict, channelType):
+		print(	os.path.abspath(os.getcwd()))
 		fileName = "%s.%s.%s" % (str(channelType.name), Tools.getDateDots(), Tools.getTimeDots())
 		# This is a testing check and should not happen in the real world, basically this will 
 		# track many messages coming in at once and overwriting the last wrote file
